@@ -1,0 +1,7 @@
+﻿[*.vb]
+
+# BC42025: Access of shared member, constant member, enum member or nested type through an instance
+dotnet_diagnostic.BC42025.severity = none
+
+# BC42105: Function doesn't return a value on all code paths
+dotnet_diagnostic.BC42105.severity = none
