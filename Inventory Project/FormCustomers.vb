@@ -491,7 +491,7 @@ Public Class FormCustomers
     End Sub
 
     Private Sub Btn_Print_Click(sender As Object, e As EventArgs) Handles Btn_Print.Click
-        If txt_custID.Text <> String.Empty And MessageBox.Show("Please confirm the transaction.", "Confirm.", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.Yes Then
+        If MessageBox.Show("Please confirm the transaction.", "Confirm.", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.Yes Then
             RGBColors.invoice = txt_invoice.Text
             'RGBColors.serv = liststr
             FormHome.OpenChildForm(FormReportTransaction)
