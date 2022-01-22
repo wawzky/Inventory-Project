@@ -22,8 +22,8 @@ Partial Class FormProduct
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.txt_search = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txt_location = New Guna.UI2.WinForms.Guna2TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -82,7 +82,7 @@ Partial Class FormProduct
         Me.txt_search.ShadowDecoration.Parent = Me.txt_search
         Me.txt_search.Size = New System.Drawing.Size(267, 36)
         Me.txt_search.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txt_search.TabIndex = 5
+        Me.txt_search.TabIndex = 6
         '
         'txt_location
         '
@@ -111,7 +111,7 @@ Partial Class FormProduct
         Me.txt_location.ShadowDecoration.Parent = Me.txt_location
         Me.txt_location.Size = New System.Drawing.Size(267, 36)
         Me.txt_location.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txt_location.TabIndex = 4
+        Me.txt_location.TabIndex = 5
         '
         'DataGridView1
         '
@@ -121,24 +121,24 @@ Partial Class FormProduct
         Me.DataGridView1.AllowUserToResizeRows = False
         Me.DataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.DimGray
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.DimGray
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.DimGray
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.DimGray
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.DimGray
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlDarkDark
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.DimGray
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlDarkDark
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.Location = New System.Drawing.Point(159, 370)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
@@ -230,7 +230,7 @@ Partial Class FormProduct
         Me.txt_price.ShadowDecoration.Parent = Me.txt_price
         Me.txt_price.Size = New System.Drawing.Size(267, 36)
         Me.txt_price.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txt_price.TabIndex = 3
+        Me.txt_price.TabIndex = 4
         '
         'btn_delete
         '
@@ -260,7 +260,7 @@ Partial Class FormProduct
         Me.btn_delete.PressedColor = System.Drawing.Color.White
         Me.btn_delete.ShadowDecoration.Parent = Me.btn_delete
         Me.btn_delete.Size = New System.Drawing.Size(75, 32)
-        Me.btn_delete.TabIndex = 8
+        Me.btn_delete.TabIndex = 9
         Me.btn_delete.Text = "Delete"
         '
         'btn_edit
@@ -291,7 +291,7 @@ Partial Class FormProduct
         Me.btn_edit.PressedColor = System.Drawing.Color.White
         Me.btn_edit.ShadowDecoration.Parent = Me.btn_edit
         Me.btn_edit.Size = New System.Drawing.Size(86, 32)
-        Me.btn_edit.TabIndex = 7
+        Me.btn_edit.TabIndex = 8
         Me.btn_edit.Text = "Edit"
         '
         'btm_save
@@ -322,7 +322,7 @@ Partial Class FormProduct
         Me.btm_save.PressedColor = System.Drawing.Color.White
         Me.btm_save.ShadowDecoration.Parent = Me.btm_save
         Me.btm_save.Size = New System.Drawing.Size(86, 32)
-        Me.btm_save.TabIndex = 6
+        Me.btm_save.TabIndex = 7
         Me.btm_save.Text = "Save"
         '
         'Label3
@@ -392,7 +392,7 @@ Partial Class FormProduct
         Me.combo_UOM.ShadowDecoration.Parent = Me.combo_UOM
         Me.combo_UOM.Size = New System.Drawing.Size(230, 36)
         Me.combo_UOM.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.combo_UOM.TabIndex = 2
+        Me.combo_UOM.TabIndex = 3
         Me.combo_UOM.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'btm_addproductgroup
@@ -504,7 +504,7 @@ Partial Class FormProduct
         Me.combo_productGroup.ShadowDecoration.Parent = Me.combo_productGroup
         Me.combo_productGroup.Size = New System.Drawing.Size(230, 36)
         Me.combo_productGroup.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.combo_productGroup.TabIndex = 1
+        Me.combo_productGroup.TabIndex = 2
         Me.combo_productGroup.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txt_productname
@@ -534,7 +534,7 @@ Partial Class FormProduct
         Me.txt_productname.ShadowDecoration.Parent = Me.txt_productname
         Me.txt_productname.Size = New System.Drawing.Size(267, 36)
         Me.txt_productname.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txt_productname.TabIndex = 0
+        Me.txt_productname.TabIndex = 1
         '
         'btn_refresh
         '
@@ -564,7 +564,7 @@ Partial Class FormProduct
         Me.btn_refresh.PressedColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(248, Byte), Integer))
         Me.btn_refresh.ShadowDecoration.Parent = Me.btn_refresh
         Me.btn_refresh.Size = New System.Drawing.Size(32, 32)
-        Me.btn_refresh.TabIndex = 9
+        Me.btn_refresh.TabIndex = 10
         Me.btn_refresh.Text = "↺"
         '
         'Label2

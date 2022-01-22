@@ -501,7 +501,7 @@ Public Class FormCustomers
     End Sub
 
     Private Sub btn_addtl_Click(sender As Object, e As EventArgs) Handles btn_addtl.Click
-        If txt_service.Text <> String.Empty And txt_parts.Text <> String.Empty Then
+        If txt_service.Text <> String.Empty And txt_parts.Text <> String.Empty And txt_qty.Text <> String.Empty Then
             If CInt(txt_qty.Text) > 0 And txt_qty.Text <> String.Empty And MessageBox.Show("Please confirm the quantity." + Environment.NewLine + "Part(s) quantity: " + txt_qty.Text, "Confirm.", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.Yes Then
                 list_Services.Items.Add(txt_service.Text)
                 txt_service.Clear()
@@ -513,13 +513,25 @@ Public Class FormCustomers
                 MessageBox.Show("Adding service/part failed!" + Environment.NewLine + "Reason: Invalid quantity.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         ElseIf txt_parts.Text <> String.Empty And txt_service.Text = String.Empty Then
-            If CInt(txt_qty.Text) > 0 And txt_qty.Text <> String.Empty And MessageBox.Show("Please confirm the quantity." + Environment.NewLine + "Part(s) quantity: " + txt_qty.Text, "Confirm.", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.Yes Then
-                list_Parts.Items.Add(txt_parts.Text & " - " & txt_qty.Text & " - " & price)
-                addupdatestock()
-                txt_parts.Clear()
-                txt_qty.Clear()
+            If txt_qty.Text <> String.Empty Then
+                If CInt(txt_qty.Text) > 0 And txt_qty.Text <> String.Empty And MessageBox.Show("Please confirm the quantity." + Environment.NewLine + "Part(s) quantity: " + txt_qty.Text, "Confirm.", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.Yes Then
+                    list_Parts.Items.Add(txt_parts.Text & " - " & txt_qty.Text & " - " & price)
+                    addupdatestock()
+                    txt_parts.Clear()
+                    txt_qty.Clear()
+                Else
+                    MessageBox.Show("Adding service/part failed!" + Environment.NewLine + "Reason: Invalid quantity.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    txt_qty.Clear()
+                    txt_parts.Clear()
+                    txt_parts.SelectAll()
+                    txt_parts.Focus()
+                End If
             Else
                 MessageBox.Show("Adding service/part failed!" + Environment.NewLine + "Reason: Invalid quantity.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                txt_qty.Clear()
+                txt_parts.Clear()
+                txt_parts.SelectAll()
+                txt_parts.Focus()
             End If
         ElseIf txt_service.Text <> "" Then
             list_Services.Items.Add(txt_service.Text)
@@ -551,16 +563,23 @@ Public Class FormCustomers
                 price = dr("proprice").ToString
                 qty = dr("proquantity").ToString
                 txt_qty.Text = qty
+            Else
+                procode = String.Empty
+                price = String.Empty
+                qty = 0.00
+                txt_qty.Text = String.Empty
             End If
-            If CInt(txt_qty.Text) = 0 Then
-                MessageBox.Show("Adding auto parts failed!" + Environment.NewLine + "Reason: Out of stock.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                txt_qty.Clear()
-                txt_parts.Clear()
-                txt_parts.SelectAll()
-                txt_parts.Focus()
+            If txt_qty.Text <> "" Then
+                If CInt(txt_qty.Text) = 0 Then
+                    MessageBox.Show("Adding auto parts failed!" + Environment.NewLine + "Reason: Out of stock.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    txt_qty.Clear()
+                    txt_parts.Clear()
+                    txt_parts.SelectAll()
+                    txt_parts.Focus()
+                End If
             End If
         End If
-        conn.Close()
+            conn.Close()
         If e.KeyCode = Keys.Enter Then
             e.SuppressKeyPress = True
             txt_qty.Focus()

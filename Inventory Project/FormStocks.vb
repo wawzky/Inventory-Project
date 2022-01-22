@@ -107,4 +107,5 @@ Public Class FormStocks
             End With
         End If
     End Sub
+
 End Class

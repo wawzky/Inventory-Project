@@ -25,8 +25,6 @@ Partial Class FormStocks
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.Btn_Export = New Guna.UI2.WinForms.Guna2Button()
-        Me.btm_Print = New Guna.UI2.WinForms.Guna2Button()
         Me.combo_productGroup = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.txt_search = New Guna.UI2.WinForms.Guna2TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -44,55 +42,6 @@ Partial Class FormStocks
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Btn_Export
-        '
-        Me.Btn_Export.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Btn_Export.Animated = True
-        Me.Btn_Export.AnimatedGIF = True
-        Me.Btn_Export.BorderRadius = 5
-        Me.Btn_Export.CheckedState.Parent = Me.Btn_Export
-        Me.Btn_Export.CustomImages.Parent = Me.Btn_Export
-        Me.Btn_Export.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Btn_Export.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Btn_Export.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Btn_Export.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Btn_Export.DisabledState.Parent = Me.Btn_Export
-        Me.Btn_Export.FillColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(248, Byte), Integer))
-        Me.Btn_Export.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Btn_Export.ForeColor = System.Drawing.Color.White
-        Me.Btn_Export.HoverState.Parent = Me.Btn_Export
-        Me.Btn_Export.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.Btn_Export.Location = New System.Drawing.Point(638, 567)
-        Me.Btn_Export.Name = "Btn_Export"
-        Me.Btn_Export.ShadowDecoration.Parent = Me.Btn_Export
-        Me.Btn_Export.Size = New System.Drawing.Size(86, 32)
-        Me.Btn_Export.TabIndex = 38
-        Me.Btn_Export.Text = "Export"
-        '
-        'btm_Print
-        '
-        Me.btm_Print.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btm_Print.Animated = True
-        Me.btm_Print.AnimatedGIF = True
-        Me.btm_Print.BorderRadius = 5
-        Me.btm_Print.CheckedState.Parent = Me.btm_Print
-        Me.btm_Print.CustomImages.Parent = Me.btm_Print
-        Me.btm_Print.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btm_Print.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btm_Print.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btm_Print.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btm_Print.DisabledState.Parent = Me.btm_Print
-        Me.btm_Print.FillColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(248, Byte), Integer))
-        Me.btm_Print.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.btm_Print.ForeColor = System.Drawing.Color.White
-        Me.btm_Print.HoverState.Parent = Me.btm_Print
-        Me.btm_Print.Location = New System.Drawing.Point(745, 567)
-        Me.btm_Print.Name = "btm_Print"
-        Me.btm_Print.ShadowDecoration.Parent = Me.btm_Print
-        Me.btm_Print.Size = New System.Drawing.Size(86, 32)
-        Me.btm_Print.TabIndex = 37
-        Me.btm_Print.Text = "Print"
         '
         'combo_productGroup
         '
@@ -290,8 +239,6 @@ Partial Class FormStocks
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(924, 621)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Btn_Export)
-        Me.Controls.Add(Me.btm_Print)
         Me.Controls.Add(Me.combo_productGroup)
         Me.Controls.Add(Me.txt_search)
         Me.Controls.Add(Me.DataGridView1)
@@ -305,9 +252,6 @@ Partial Class FormStocks
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Btn_Export As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btm_Print As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents combo_productGroup As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents txt_search As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents DataGridView1 As DataGridView

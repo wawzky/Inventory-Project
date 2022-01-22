@@ -207,7 +207,7 @@ Public Class FormCars
             txt_color.SelectAll()
             txt_color.Focus()
         ElseIf txt_carprice.Text = String.Empty Or IsNumeric(txt_carprice.Text) = False Then
-            MessageBox.Show("Failed saving a new car!!" + Environment.NewLine + "Reason: Color of the car is required.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Failed saving a new car!!" + Environment.NewLine + "Reason: Price of the car is required.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             txt_carprice.SelectAll()
             txt_carprice.Focus()
         ElseIf txt_engineno.Text.Trim = String.Empty And txt_chassisno.Text.Trim = String.Empty Then
@@ -312,4 +312,5 @@ Public Class FormCars
             MessageBox.Show("Failed selling a car!" + Environment.NewLine + "Reason: Car selection from the table is required.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
+
 End Class
